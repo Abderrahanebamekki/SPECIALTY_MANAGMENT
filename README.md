@@ -58,4 +58,33 @@ This project is a web-based application designed for managing students and their
    ```json
     {
      "message" : "Success message or error message"
-   } 
+   }
+
+#### DELETE Student
+- **Endpoint:** `DELETE /student//delete/{id}`
+- **Description:** delete a student.
+- **Response Body:**
+   ```json
+    {
+     "message" : "Success message or error message"
+   }
+#### Retrive All Students
+- **Endpoint:** `GET /student/gelAll`
+- **Description:** retrive all students.
+- **Response Body:**
+   ```json
+    {
+     "message" : "Success message or error message"
+      "data":[
+   {
+    "numStudent": "String",
+    "firstName": "String",
+    "lastName": "String",
+    "avgS1": "double",
+    "avgS2": "double",
+    "avgS3": "double",
+    "avgS4": "double"
+  }
+             ]
+   }   
+   
