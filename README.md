@@ -1,6 +1,4 @@
 # Specialties Management Project
-
-## Description
 This project is a web-based application designed for managing students and their chosen specialties. It includes functionalities for CRUD operations on students, specialties, and student choices, as well as search and filtering capabilities.
 
 ## Features
@@ -35,3 +33,29 @@ This project is a web-based application designed for managing students and their
     "avgS3": "double",
     "avgS4": "double"
   }
+ - **Response Body:**
+   ```json
+    {
+    "message": "Success message or error message"
+   }
+   
+
+#### Update Student
+- **Endpoint:** `PUT /student/update`
+- **Description:** update a student.
+- **Request Body:**
+  ```json
+  {
+    "numStudent": "String",
+    "firstName": "String",
+    "lastName": "String",
+    "avgS1": "double",
+    "avgS2": "double",
+    "avgS3": "double",
+    "avgS4": "double"
+  }
+ - **Response Body:**
+   ```json
+    {
+     "message" : "Success message or error message"
+   } 
