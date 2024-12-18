@@ -199,5 +199,27 @@ This project is a web-based application designed for managing students and their
    }
    
    
-     
+# Choice Management API
+
+### Add Choice for Student
+- **Endpoint:** `POST /choices/new_choice/{numStudent}`
+- **Request Body:**
+  ```json
+  [
+    {
+      "specialty": "Long",
+      "orderChoice": "Integer"
+    }
+  ]
+
+### Update Choice for Student
+- **Endpoint:** `PUT /choices/new_choice/{numStudent}`
+- **Request Body:**
+  ```json
+  [
+    {
+      "specialty": "Long",
+      "orderChoice": "Integer"
+    }
+  ]      
    
