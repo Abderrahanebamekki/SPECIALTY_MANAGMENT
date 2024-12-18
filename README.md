@@ -59,7 +59,7 @@ This project is a web-based application designed for managing students and their
    }
 
 #### DELETE Student
-- **Endpoint:** `DELETE /student//delete/{id}`
+- **Endpoint:** `DELETE /student/delete/{id}`
 - **Response Body:**
    ```json
     {
@@ -92,15 +92,15 @@ This project is a web-based application designed for managing students and their
      "message" : "get student with choices successfully",
       "data":[
                  {
-			              "numStudent": "String",
-			              "firstName": "String",
-			              "lastName": "String",
-			              "average": double,
-			              "choice1": "String",
-			              "choice2": "String",
-			              "choice3": "String",
-			              "choice4": "String"
-		              }
+		     "numStudent": "String",
+		     "firstName": "String",
+		     "lastName": "String",
+		     "average": double,
+		     "choice1": "String",
+		     "choice2": "String",
+		     "choice3": "String",
+		     "choice4": "String"
+		 }
              ]
    }
    
@@ -113,18 +113,91 @@ This project is a web-based application designed for managing students and their
      "message" : "affected spe",
       "data":[
                  {
-			              "numStudent": "String",
-			              "firstName": "String",
-			              "lastName": "String",
-			              "average": double,
-			              "choice1": "String",
-			              "choice2": "String",
-			              "choice3": "String",
-			              "choice4": "String",
-                    "assignedSpeciality": "String"
-		              }
+                     "numStudent": "String",
+		     "firstName": "String",
+		     "lastName": "String",
+		     "average": double,
+		     "choice1": "String",
+		      "choice2": "String",
+		      "choice3": "String",
+		      "choice4": "String",
+                      "assignedSpeciality": "String"
+		  }
              ]
-   }   
+   }
+
+### Specialities API
+
+#### Add Specialty
+- **Endpoint:** `POST /speciality/new_speciality`
+- **Request Body:**
+  ```json
+  {
+    "name": "String",
+    "firstNanumberOfPlacesme": double
+  }
+ - **Response Body:**
+   ```json
+    {
+    "message": "Success message or error message"
+   }
+   
+
+#### Update Specialty
+- **Endpoint:** `PUT /speciality/update_speciality`
+- **Request Body:**
+  ```json
+  {
+    "name": "String",
+    "firstNanumberOfPlacesme": double
+  }
+ - **Response Body:**
+   ```json
+    {
+     "message" : "Success message or error message"
+   }
+
+#### DELETE Specialty
+- **Endpoint:** `DELETE /speciality/delete_speciality/{id}`
+- **Response Body:**
+   ```json
+    {
+     "message" : "Success message or error message"
+   }
+#### Retrive All Specialities
+- **Endpoint:** `GET /speciality/specialities`
+- **Response Body:**
+   ```json
+    {
+     "message" : "Success message or error message"
+      "data":[
+               {
+                  "firstName": "String",
+                  "numStudent": "String",
+                  "lastName": "String",
+                  "avgS1": "double",
+                  "avgS2": "double",
+                  "avgS3": "double",
+                  "avgS4": "double"
+               }
+             ]
+   }
+
+#### Get All Student With choices
+- **Endpoint:** `GET /student/student_choices`
+ - **Response Body:**
+   ```json
+    {
+     "message" : "get student with choices successfully",
+      "data":[
+                 {
+                    "id"Long
+		    "name": "String",
+		    "numberOfPlaces": double
+		 }
+             ]
+   }
+   
    
      
    
