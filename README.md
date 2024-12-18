@@ -27,12 +27,11 @@ This project is a web-based application designed for managing students and their
 - **Request Body:**
   ```json
   {
-  "numStudent": "String",
-  "firstName": "String",
-  "lastName": "String",
-  "avgS1": double,
-  "avgS2": double,
-  "avgS3": double,
-  "avgS4": double
-}
-```
+    "numStudent": "String",
+    "firstName": "String",
+    "lastName": "String",
+    "avgS1": "double",
+    "avgS2": "double",
+    "avgS3": "double",
+    "avgS4": "double"
+  }
