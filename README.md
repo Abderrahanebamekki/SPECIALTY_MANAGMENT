@@ -21,7 +21,6 @@ This project is a web-based application designed for managing students and their
 
 #### Add Student
 - **Endpoint:** `POST /student/addStudent`
-- **Description:** Adds a new student.
 - **Request Body:**
   ```json
   {
@@ -42,7 +41,6 @@ This project is a web-based application designed for managing students and their
 
 #### Update Student
 - **Endpoint:** `PUT /student/update`
-- **Description:** update a student.
 - **Request Body:**
   ```json
   {
@@ -62,7 +60,6 @@ This project is a web-based application designed for managing students and their
 
 #### DELETE Student
 - **Endpoint:** `DELETE /student//delete/{id}`
-- **Description:** delete a student.
 - **Response Body:**
    ```json
     {
@@ -70,21 +67,64 @@ This project is a web-based application designed for managing students and their
    }
 #### Retrive All Students
 - **Endpoint:** `GET /student/gelAll`
-- **Description:** retrive all students.
 - **Response Body:**
    ```json
     {
      "message" : "Success message or error message"
       "data":[
-   {
-    "numStudent": "String",
-    "firstName": "String",
-    "lastName": "String",
-    "avgS1": "double",
-    "avgS2": "double",
-    "avgS3": "double",
-    "avgS4": "double"
-  }
+               {
+                  "firstName": "String",
+                  "numStudent": "String",
+                  "lastName": "String",
+                  "avgS1": "double",
+                  "avgS2": "double",
+                  "avgS3": "double",
+                  "avgS4": "double"
+               }
+             ]
+   }
+
+#### Get All Student With choices
+- **Endpoint:** `GET /student/student_choices`
+ - **Response Body:**
+   ```json
+    {
+     "message" : "get student with choices successfully",
+      "data":[
+                 {
+			              "numStudent": "String",
+			              "firstName": "String",
+			              "lastName": "String",
+			              "average": double,
+			              "choice1": "String",
+			              "choice2": "String",
+			              "choice3": "String",
+			              "choice4": "String"
+		              }
+             ]
+   }
+   
+   
+#### Get All Student With Affected Speciality
+- **Endpoint:** `GET /student/Affected_spe`
+ - **Response Body:**
+   ```json
+    {
+     "message" : "affected spe",
+      "data":[
+                 {
+			              "numStudent": "String",
+			              "firstName": "String",
+			              "lastName": "String",
+			              "average": double,
+			              "choice1": "String",
+			              "choice2": "String",
+			              "choice3": "String",
+			              "choice4": "String",
+                    "assignedSpeciality": "String"
+		              }
              ]
    }   
+   
+     
    
